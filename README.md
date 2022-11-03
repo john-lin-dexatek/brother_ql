@@ -69,7 +69,7 @@ The main user interface of this package is the command line tool `brother_ql`.
     
     Options:
       -b, --backend [pyusb|network|linux_kernel]
-      -m, --model [QL-500|QL-550|QL-560|QL-570|QL-580N|QL-650TD|QL-700|QL-710W|QL-720NW|QL-800|QL-810W|QL-820NWB|QL-1050|QL-1060N]
+      -m, --model [QL-500|QL-550|QL-560|QL-570|QL-580N|QL-650TD|QL-700|QL-710W|QL-720NW|QL-800|QL-810W|QL-820NWB|QL-1050|QL-1060N|QL1100]
       -p, --printer PRINTER_IDENTIFIER
                                       The identifier for the printer. This could
                                       be a string like tcp://192.168.1.21:9100 for
@@ -98,7 +98,7 @@ The most important command is the `print` command and here is its CLI signature:
       Print a label of the provided IMAGE.
     
     Options:
-      -l, --label [12|29|38|50|54|62|102|17x54|17x87|23x23|29x42|29x90|39x90|39x48|52x29|62x29|62x100|102x51|102x152|d12|d24|d58]
+      -l, --label [12|29|38|50|54|62|102|17x54|17x87|23x23|29x42|29x90|39x90|39x48|52x29|62x29|62x100|102x51|102x152|103x164|d12|d24|d58]
                                       The label (size, type - die-cut or endless).
                                       Run `brother_ql info labels` for a full
                                       list including ideal pixel dimensions.
@@ -155,6 +155,7 @@ The available label names can be listed with `brother_ql info labels`:
      62x100     696 x 1109    62mm x 100mm die-cut
      102x51    1164 x  526    102mm x 51mm die-cut
      102x152   1164 x 1660    102mm x 153mm die-cut
+     103x164   1200 x 1822    103mm x 164mm die-cut
      d12         94 x   94    12mm round die-cut
      d24        236 x  236    24mm round die-cut
      d58        618 x  618    58mm round die-cut

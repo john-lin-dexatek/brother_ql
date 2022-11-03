@@ -8,7 +8,7 @@ except ImportError:
 try:
     import pypandoc
     LDESC = open('README.md', 'r').read()
-    LDESC = pypandoc.convert(LDESC, 'rst', format='md')
+    LDESC = pypandoc.convert_text(LDESC, 'rst', format='md')
 except (ImportError, IOError, RuntimeError) as e:
     print("Could not create long description:")
     print(str(e))
@@ -51,7 +51,7 @@ setup(name='brother_ql',
           #'brother_ql_analyse':  ["matplotlib",],
           #'brother_ql_create' :  ["matplotlib",],
       },
-      keywords = 'Brother QL-500 QL-550 QL-560 QL-570 QL-700 QL-710W QL-720NW QL-800 QL-810W QL-820NWB QL-1050 QL-1060N',
+      keywords = 'Brother QL-500 QL-550 QL-560 QL-570 QL-700 QL-710W QL-720NW QL-800 QL-810W QL-820NWB QL-1050 QL-1060N QL-1100',
       classifiers = [
           'Development Status :: 4 - Beta',
           'Operating System :: OS Independent',
