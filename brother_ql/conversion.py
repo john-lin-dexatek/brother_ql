@@ -41,7 +41,7 @@ def convert(qlr, images, label,  **kwargs):
         * **red**
         * **rotate**
         * **dpi_600**
-        * **hq**
+        * **lq**
         * **threshold**
     """
     label_specs = label_type_specs[label]
@@ -58,7 +58,7 @@ def convert(qlr, images, label,  **kwargs):
     rotate = kwargs.get('rotate', 'auto')
     if rotate != 'auto': rotate = int(rotate)
     dpi_600 = kwargs.get('dpi_600', False)
-    hq = kwargs.get('hq', True)
+    hq = not kwargs.get('lq', False)
     threshold = kwargs.get('threshold', 70)
     threshold = 100.0 - threshold
     threshold = min(255, max(0, int(threshold/100.0 * 255)))
